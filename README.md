@@ -1,4 +1,4 @@
-#Bouncing ball, raytracing as basic as it gets.
+# Bouncing ball, raytracing as basic as it gets.
 Sphere "raytrace" rendering in GLSL, the lighting and transparency are faux effects just using the x distance and distance from 
 "camera" and matching the pixel color to that of the fractal background.
 
