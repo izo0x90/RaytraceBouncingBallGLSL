@@ -32,8 +32,8 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     vec3 ballcolor = bool(int(iTime)%10) ? vec3(1, .2, 0) 
         : vec3(float((int(fragCoord.x)*2)^(int(fragCoord.y)*2))/((iResolution.x*iResolution.y)/300.),.2,0);
     
-    vec3 col = dist > 0. ? mix(vec3(x*20. - dist), ballcolor, .4) : //"Raytraced" ball
-    	vec3(0,0,float(int(fragCoord.x)^int(fragCoord.y))/((iResolution.x*iResolution.y)/300./blink_bg) ); //Generate background
+  	vec3 col = y > radius ? vec3(0,0,float(int(fragCoord.x)^int(fragCoord.y))/((iResolution.x*iResolution.y)/300./blink_bg) ) : //Generate background
+    	mix(vec3(x*20. - dist), ballcolor, .4);//"Raytraced" ball
     
     // Output to screen
     fragColor = vec4(col,1.0);
